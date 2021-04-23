@@ -1,0 +1,69 @@
+# const K = 1.0
+# const H = 1.0
+
+# const DEFAULT_JUDGEMENT_FREQUENCY = 1.0
+# const DEFAULT_JUDGEMENT_CONFIDENCE = 0.9
+# const DEFAULT_JUDGMENT_PRIORITY = 0.8
+# const DEFAULT_JUDGMENT_DURABILITY = 0.5
+
+# const DEFAULT_QUESTION_PRIORITY = 0.9
+# const DEFAULT_QUESTION_DURABILITY = 0.9
+
+# # 最多匹配三个有效的termlink进行推理,即一个tasklink最多推理3次
+# const MAX_REASONED_TERM_LINK = 3
+# # 为了找到有效的termlink,最多试10次
+# const MAX_MATCHED_TERMLINK = 10
+# # termlink的记忆时长
+# const TERMLINK_MEMED_CYCLES = 10
+
+# # The budget threshold rate for task to be accepted.
+# const BUDGET_THRESHOLD = 0.01
+# const THRESHOLD = 10
+# const TOTAL_LEVEL = 100
+# const RELA_THRESHOLD = THRESHOLD / TOTAL_LEVEL
+
+# const CONCEPT_FORGET_CYCLES = 10
+# const TASKLINK_FORGET_CYCLES = 20
+# const TERMLINK_FORGET_CYCLES = 50
+
+# # TaskLink记录的最大长度
+# const TERMLINK_RECORD_LENGTH = 10
+
+# const TABLE_MAX_LENGTH = 7
+
+Base.@kwdef struct Parameters
+    # Table 相关参数
+    TABLE_MAX_LENGTH = 7
+    TERMLINK_RECORD_LENGTH = 10
+    # 遗忘参数
+    CONCEPT_FORGET_CYCLES = 10
+    TASKLINK_FORGET_CYCLES = 20
+    TERMLINK_FORGET_CYCLES = 50
+    # 真值相关参数
+    DEFAULT_JUDGEMENT_FREQUENCY = 1.0
+    DEFAULT_JUDGEMENT_CONFIDENCE = 0.9
+    HORIZION = 1.
+    K = 1.
+    # 预算值相关参数
+    BUDGET_THRESHOLD = 0.01
+    DEFAULT_JUDGMENT_PRIORITY = 0.8
+    DEFAULT_JUDGMENT_DURABILITY = 0.5
+    DEFAULT_QUESTION_PRIORITY = 0.9
+    DEFAULT_QUESTION_DURABILITY = 0.9
+    # 推理相关参数
+    MAX_REASONED_TERM_LINK = 3
+    MAX_MATCHED_TERMLINK = 10
+    TERMLINK_MEMED_CYCLES = 10
+    # Narsche容器相关参数
+    TOTAL_LEVEL = 100
+    THRESHOLD = 10
+    RELA_THRESHOLD = 0.1
+
+    TRUTH_EPSILON = 0.01
+    DEFAULT_CREATION_EXPECTATION = 0.66
+
+    MAXIMUM_QUESTIONS_SIZE = 5
+end
+
+const NaParam = Parameters()
+const RELIANCE = 0.9
