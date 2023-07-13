@@ -392,7 +392,7 @@ function abdindcom(::Type{T}, P, S, nar::Nar) where T
     if nar.forward
         Threads.@spawn derivetask2(Forward(), term1, :abduction, nar)
         Threads.@spawn derivetask2(Forward(), term2, :inv_abd, nar)
-        derivetask2(Forward(), term3 :comparision, nar)
+        derivetask2(Forward(), term3, :comparision, nar)
     else
         Threads.@spawn derivetask2(Backward(), term1, nar)
         Threads.@spawn derivetask2(Backward(), term3, nar)
