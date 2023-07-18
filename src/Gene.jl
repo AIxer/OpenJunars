@@ -27,7 +27,7 @@ export Budget, Token, ave_ari, ave_geo, ave_priority, above_threshold
 
 export Truth, expect, absexpdiff, t2q, revision, isnegative
 export deduction, induction, abduction, analogy
-export contraposition, negation, resemblance, exemplification, comparision, intersection, difference
+export contraposition, negation, conversion, resemblance, exemplification, comparision, intersection, difference
 export reduceconj, reducedisj, reduceconj_neg, anonymous_analogy, inv_anonymous_ana,
     inv_abd, inv_ded, inv_ind, inv_com, inv_reduceconj, inv_reducedisj,
     inv_reduceconj_neg, inv_ana, inv_difference
