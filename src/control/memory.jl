@@ -42,12 +42,12 @@ end
 """
 把Judgment添加到BeliefTable中,同时尝试修正
 """
-function process_judgment(cpt, task, nar)
+function process_judgment(cpt::Concept, task::NaTask, nar)
     judgment = task.sentence
     oldbest = isnothing(cpt.beliefs) ? nothing : first(cpt.beliefs)
     if !isnothing(oldbest)
         if judgment.stamp == oldbest.stamp
-            if eltype(task.ptask.sentence) <: Judgement
+            if !isnothing(task.ptask) && eltype(task.ptask.sentence) <: Judgement # 要查询，先看有没有
                 dec_priority!(task, 0) # 重复的任务
             end
             return

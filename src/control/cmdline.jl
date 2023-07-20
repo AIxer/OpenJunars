@@ -1,7 +1,6 @@
 function ignite(nacore::NaCore)
     while true
-        # 输出彩色字符（绿色粗体→"Junars> "→重置格式 ）
-        print("\e[1;32mJunars> \e[0m")
+        printstyled("Junars>", bold=true, color=:light_green)
         input = readline(stdin) |> strip |> string
         isempty(input) && continue
         # 冒号开头的特殊指令
