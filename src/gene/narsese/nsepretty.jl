@@ -21,7 +21,7 @@ name(t::ExtImage) = "(/," * join(name.(t.comps), ",") * ")"
 name(t::IntImage) = "(\\," * join(name.(t.comps), ",") * ")"
 name(t::Product) = "(*," * join(name.(t.comps), ",") * ")"
 
-name(t::Negation) = "(¬,$(name(t.ϕ)))"
+name(t::Negation) = "(¬,$(name(t.comps[1])))"
 name(t::Conjunction) = "(&&," * join(name.(t.comps), ",") * ")"
 name(t::Disjunction) = "(||," * join(name.(t.comps), ",") * ")"
 
