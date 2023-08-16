@@ -12,6 +12,7 @@ export ExtSet, IntSet, ExtIntersection, IntIntersection, ExtDiff, IntDiff
 export Product, ExtImage, IntImage, Image
 export Inheritance, Similarity, Implication, Equivalence, Negation, Conjunction, Disjunction
 export Atom, Word, Variable, Action
+export PlaceHolder
 export FOTerm, NALSet, NALIntersection, NALDifference
 
 export ⋃, ⋂, ⊖, ∧, ∨
